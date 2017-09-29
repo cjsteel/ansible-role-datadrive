@@ -4,11 +4,14 @@ ansible-role-datadrive
 
 An Ansible role to install and manage a workstations local **datadrive**
 
-
 Description
 -----------
 
-This role is under development. This is a slightly edited template, most values are not correct.
+Unusable - This role is under development. This is a slightly edited template, most values are not correct.
+
+Version
+-------
+0.0.0
 
 Resources
 ---------
