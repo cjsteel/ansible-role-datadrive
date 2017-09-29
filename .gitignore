@@ -1,0 +1,15 @@
+*.swp
+*.retry
+*.log
+
+# temp files
+*~
+# private files
+.private
+.prv
+.vault
+
+# directories
+
+.vagrant
+*.log
