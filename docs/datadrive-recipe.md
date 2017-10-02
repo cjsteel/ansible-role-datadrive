@@ -242,7 +242,7 @@ For the LDAP users `/data1/home/users`
 
 ```shell
 sudo chown root:aceusers /data1/home/users
-sudo chmod 0755 /data1/home/users
+sudo chmod 0775 /data1/home/users
 ```
 
 Confirm changes
@@ -261,7 +261,57 @@ drwxr-xr-x 2 root aceusers 4096 Sep 29 11:01 users
 
 If the users previous data drive contains data you can install the drive and copy the data to the new more robust hdd.
 
+* mount old drive to **/data2**
+* Copy, rsync or move data as required.
 
+### Restoring data
+
+Using rsync
+
+as root
+
+```shell
+sudo rsync -a /data2/cmoreau/ /data1/home/users/cmoreau/
+```
+
+as regular user
+
+```shell
+rsync -a /home/my_home/ /media/backup/my_home/
+```
+
+details
+
+```shell
+From the rsync manpage:
+
+ -a, --archive
+              This  is  equivalent  to  -rlptgoD.  It  is a quick way of saying you want
+              recursion and want to preserve almost everything (with -H being a  notable
+              omission).    The   only  exception  to  the  above  equivalence  is  when
+              --files-from is specified, in which case -r is not implied.
+
+              Note that -a does not preserve hardlinks, because finding  multiply-linked
+              files is expensive.  You must separately specify -H.
+```
+
+Using cp
+
+```shell
+sudo cp -rp /home/my_home /media/backup/my_home
+```
+
+details
+
+```shell
+From cp manpage:
+
+ -p     same as --preserve=mode,ownership,timestamps
+
+ --preserve[=ATTR_LIST]
+          preserve the specified attributes (default: mode,ownership,timestamps),
+          if possible additional attributes: context, links, xattr, all
+```
 
 
 
