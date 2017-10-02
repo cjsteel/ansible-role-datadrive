@@ -19,7 +19,7 @@ datadrive_users_home_default_owner : root
 
 # ldap users
 datadrive_ldap_users_home : {{ datadrive_mount_point }}/home/users
-datadrive_ldap_users_home_default_permissions : 0755
+datadrive_ldap_users_home_default_permissions : 0775
 datadrive_ldap_users_home_default_owner : root
 datadrive_ldap_users_home_default_group : aceusers #
 ```
