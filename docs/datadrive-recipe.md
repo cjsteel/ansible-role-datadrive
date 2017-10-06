@@ -242,7 +242,7 @@ For the LDAP users `/data1/home/users`
 
 ```shell
 sudo chown root:aceusers /data1/home/users
-sudo chmod 0775 /data1/home/users
+sudo chmod 0770 /data1/home/users
 ```
 
 Confirm changes
